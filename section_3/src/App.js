@@ -16,13 +16,27 @@ function App() {
       <div className='container'>
         <section className='section'>
           <div className='column is-4'>
-            <ProfileCard title="Alexa" handle="@alexa99" image={AlexaImg}/>
+            <ProfileCard 
+              title="Alexa" 
+              handle="@alexa99" 
+              image={AlexaImg}
+              description="Alexa was made by Amazon."
+            />
           </div>
           <div className='column is-4'>
-            <ProfileCard title="Cortana" handle="@cortana32" image={CortanaImg} />
+            <ProfileCard 
+              title="Cortana" 
+              handle="@cortana32" 
+              image={CortanaImg}
+              description="Cortana was made by Microsoft. Who knows what is does?" 
+            />
           </div>
           <div className='column is-4'>
-            <ProfileCard title="Siri" handle="@siri01" image={SiriImg} />
+            <ProfileCard 
+              title="Siri" 
+              handle="@siri01" 
+              image={SiriImg}
+              description="Siri was made by Apple and is being phased out." />
           </div>
         </section>
       </div>
