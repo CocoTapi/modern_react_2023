@@ -1,6 +1,6 @@
 function BookEdit () {
     return (
-        <div></div>
+        <div>Book Edit</div>
     )
 }
 
