@@ -1,6 +1,14 @@
-function SearchBar() {
+function SearchBar({ onSubmit }) {
+    const handleClick = () => {
+        onSubmit('cars')
+    };
+
     return (
-        <div></div>
+        <div>
+            <input />
+            <button onClick={handleClick}>Search</button>
+        </div>
+        
     )
 };
 
