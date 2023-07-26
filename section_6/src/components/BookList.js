@@ -5,6 +5,8 @@ function BookList ({books, onDelete}) {
         return <BookShow onDelete={onDelete} key={book.id} book={book} />
     })
 
+    console.log(renderedBooks);
+
     return (
         <div className="book-List">
             {renderedBooks}

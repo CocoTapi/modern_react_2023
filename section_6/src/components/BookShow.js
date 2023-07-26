@@ -1,11 +1,13 @@
-function BookShow (book, onDelete) {
+function BookShow ({ book, onDelete }) {
     const handleClick = () => {
         onDelete(book.id);
     }
 
+    console.log(book)
+
     return (
         <div className="book-show">
-            <div>{book.title}</div>
+            {book.title}
             <div className="actions">
                 <button className="delete" onClick={handleClick}>
                     Delete
@@ -16,4 +18,4 @@ function BookShow (book, onDelete) {
     )        
 }
 
-export default BookShow
+export default BookShow;
