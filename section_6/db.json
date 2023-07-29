@@ -1,5 +1,14 @@
 {
-  "books": [],
+  "books": [
+    {
+      "title": "asd",
+      "id": 1
+    },
+    {
+      "title": "Harry Potter",
+      "id": 2
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"
