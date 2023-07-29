@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
@@ -7,10 +7,26 @@ import BookList from "./components/BookList";
 function App () {
     const [books, setBooks] = useState([]);
 
-    const editBookById = (id, newTitle) => {
+    const fetchBooks = async () => {
+        const response = await axios.get('http://localhost:3001/books');
+
+        setBooks(response.data);
+    }
+
+    //Don't call fetchBooks() here because it'll be in the infinite loop
+
+    useEffect(() => {
+        fetchBooks();
+    }, []);
+
+    const editBookById = async (id, newTitle) => {
+        const response = await axios.put(`http://localhost:3001/books/${id}`, {
+            title: newTitle
+        })
+
         const updatedBooks = books.map((book) => {
             if (book.id === id) {
-                return {...book, title: newTitle};
+                return {...book, ...response.data};
             }
             return book
         })
