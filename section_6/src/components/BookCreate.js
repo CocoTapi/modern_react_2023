@@ -11,7 +11,7 @@ function BookCreate () {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        handleCreateBook\(title);
+        handleCreateBook(title);
         //make input reset for next  
         setTitle('');
     }
