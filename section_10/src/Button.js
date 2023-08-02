@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 function Button ({ 
     children,
@@ -17,13 +17,13 @@ function Button ({
 };
 
 Button.propTypes = {
-    checkVariationValue: (primary, secondary, success, warning, danger) => {
+    checkVariationValue: ({ primary, secondary, success, warning, danger }) => {
         const count = 
-        Number(!!primary) +
-        Number(!!secondary) +
-        Number(!!warning) +
-        Number(!!success) +
-        Number(!!danger);
+            Number(!!primary) +
+            Number(!!secondary) +
+            Number(!!warning) +
+            Number(!!success) +
+            Number(!!danger);
 
     if (count > 1) {
         return new Error(
