@@ -16,6 +16,7 @@ function Button ({
         'border-green-400 bg-green-400 text-white': success,
         'border-yellow-400 bg-yellow-400 text-white': warning,
         'border-red-300 bg-red-300 text-white': danger,
+        'rounded-full': rounded,
     });
 
     return (
