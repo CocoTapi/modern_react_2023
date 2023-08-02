@@ -3,10 +3,14 @@ import { GoBell, GoCopilot, GoEyeClosed } from 'react-icons/go';
 import Button from './Button.js';
 
 function App() {
+  const handleClick = () => {
+    console.log('Click!')
+  }
+
   return (
     <div>
       <div>
-        <Button success >Click Me!</Button>
+        <Button success onClick={handleClick} >Click Me!</Button>
       </div>
       <div>
         <Button danger rounded outline ><GoBell />Buy Now!</Button>
