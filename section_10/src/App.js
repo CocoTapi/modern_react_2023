@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <div>
-        <Button success onClick={handleClick} >Click Me!</Button>
+        <Button success onClick={handleClick} className='mb-5' >Click Me!</Button>
       </div>
       <div>
         <Button danger rounded outline ><GoBell />Buy Now!</Button>
