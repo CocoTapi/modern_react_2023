@@ -17,6 +17,13 @@ function Button ({
         'border-yellow-400 bg-yellow-400 text-white': warning,
         'border-red-300 bg-red-300 text-white': danger,
         'rounded-full': rounded,
+        'bg-white': outline,
+        'text-blue-400': outline && primary,
+        'text-gray-900': outline && secondary,
+        'text-green-400': outline && success,
+        'text-yellow-400': outline && warning,
+        'text-red-300': outline && danger,
+
     });
 
     return (

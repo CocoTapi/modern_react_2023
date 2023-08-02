@@ -7,13 +7,13 @@ function App() {
         <Button success >Click Me!</Button>
       </div>
       <div>
-        <Button danger rounded >Buy Now!</Button>
+        <Button danger rounded outline >Buy Now!</Button>
       </div>
       <div>
         <Button secondary>See Deal!</Button>
       </div>
       <div>
-        <Button primary>Go to a Cart</Button>
+        <Button primary outline>Go to a Cart</Button>
       </div>
       <div>
         <Button warning rounded>Hide Ads!</Button>
