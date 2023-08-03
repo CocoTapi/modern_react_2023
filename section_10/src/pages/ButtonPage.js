@@ -1,8 +1,8 @@
 import { GoBell, GoCopilot, GoEyeClosed } from 'react-icons/go';
 
-import Button from './components/Button.js';
+import Button from '../components/Button.js';
 
-function App() {
+function ButtonPage () {
   const handleClick = () => {
     console.log('Click!')
   }
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default ButtonPage;
