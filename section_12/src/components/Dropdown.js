@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { GoChevronDown } from 'react-icons/go';
 
 function Dropdown({ options, value, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +18,17 @@ function Dropdown({ options, value, onChange }) {
 
   const renderedOptions = options.map((option) => {
     return (
-      <div onClick={() => handleOptionClick(option)} key={option.value}>{option.label}</div>
+      <div className='hover:bg-sky-100 rounded cursor-pointer p-1' onClick={() => handleOptionClick(option)} key={option.value}>{option.label}</div>
     )
   })
 
   return (
-    <div>
-      <div onClick={handleClick}>
+    <div className='w-48 relative'>
+      <div className='flex justify-between item-center cursor-pointer border rounded p-3 shadow bg-white e-full' onClick={handleClick}>
         {value?.label || 'Select...'}
+        <GoChevronDown className='text-lg'/>
       </div>
-      {isOpen && <div>{renderedOptions}</div>}
+      {isOpen && <div className='absolute to-full border rounded p-3 shadow bg-white w-full'>{renderedOptions}</div>}
     </div>
   )
 }
