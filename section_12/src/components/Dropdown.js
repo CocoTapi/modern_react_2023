@@ -8,7 +8,14 @@ function Dropdown({ options, value, onChange }) {
 
   useEffect(() => {
     const handler = (event) => {
-      console.log(event.target);
+      if (!divEl.current) {
+        return;
+      }
+
+      //if people click outside of the selection, the dropdown will close
+      if (!divEl.current.contains(event.target)) {
+        setIsOpen(false);
+      };
     };
 
     document.addEventListener('click', handler, true);
@@ -37,7 +44,7 @@ function Dropdown({ options, value, onChange }) {
   })
 
   return (
-    <div className='w-48 relative'>
+    <div ref={divEl} className='w-48 relative'>
       <Panel className='flex justify-between item-center cursor-pointer' onClick={handleClick}>
         {value?.label || 'Select...'}
         <GoChevronDown className='text-lg'/>
