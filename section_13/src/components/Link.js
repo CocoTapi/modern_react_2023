@@ -5,7 +5,7 @@ function Link ({ to, children }) {
     const { navigate } = useContext(NavigationContext);
 
     const handleClick = (event) => {
-        event.prevent.default();
+        event.preventDefault();
 
         navigate(to);
     };
