@@ -37,7 +37,7 @@ function SortableTable (props) {
                 <th className='cursor-pointer hover:bg-red-100' onClick={() => handleClick(column.label)}>
                     <div className='flex items-center'>
                         {getIcons(column.label, sortBy, sortOrder)}
-                        {column.label} IS SORTABLE
+                        {column.label}
                     </div>
                 </th>
             )
