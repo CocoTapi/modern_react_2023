@@ -51,7 +51,7 @@ dataVegi.sort((a, b) => {
     }
 })
 
-//dscending order (return negative )
+//[Step 2*]dscending order (return negative )
 dataVegi.sort((a, b) => {
     const valueA = getSortValue(a);
     const valueB = getSortValue(b);
@@ -63,7 +63,7 @@ dataVegi.sort((a, b) => {
     }
 })
 
-//OR 
+//OR [Step 2*]
 const sortOrder = 'asc'; // 'desc'
 
 dataVegi.sort((a, b) => {
