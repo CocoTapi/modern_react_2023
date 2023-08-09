@@ -24,9 +24,13 @@ function TablePage() {
     }
   ];
 
+  const keyFunction = (fruit) => {
+    return fruit.name;
+  }
+
   return (
     <div>
-      <Table data={data} config={config}/>
+      <Table data={data} config={config} keyFn={keyFunction}/>
     </div>
   );
 }
