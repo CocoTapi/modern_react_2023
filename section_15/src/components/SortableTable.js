@@ -70,7 +70,10 @@ function SortableTable (props) {
     }
  
     return (
-        <Table {...props} data={sortedData} config={updatedConfig}/>
+        <div>
+            {sortBy} - {sortOrder}
+            <Table {...props} data={sortedData} config={updatedConfig}/>
+        </div>
     )
 };
 
