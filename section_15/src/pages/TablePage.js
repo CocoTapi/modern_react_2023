@@ -1,4 +1,4 @@
-//import Table from '../components/Table';
+import Table from '../components/Table';
 import SortableTable from '../components/SortableTable';
 
 function TablePage() {
@@ -38,6 +38,9 @@ function TablePage() {
 
   return (
     <div>
+      <h1>Plain Table</h1>
+      <Table data={data} config={config} keyFn={keyFunction}/>
+      <h1>Sortable Table</h1>
       <SortableTable data={data} config={config} keyFn={keyFunction}/>
     </div>
   );
