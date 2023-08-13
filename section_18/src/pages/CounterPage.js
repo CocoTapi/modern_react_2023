@@ -19,7 +19,7 @@ function CounterPage({ initialCount }) {
     event.preventdefault();
     const value = event.target.value;
     
-    console.log(value)
+    setValueToAdd(value);
   }
 
   return (
