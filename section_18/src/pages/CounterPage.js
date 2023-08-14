@@ -22,7 +22,7 @@ function CounterPage({ initialCount }) {
   };
 
   const handleSubmit = (event) => {
-    event.preventdefault();
+    event.preventDefault();
 
     setCount(count + valueToAdd);
     setValueToAdd(0);
