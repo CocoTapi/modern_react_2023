@@ -90,7 +90,8 @@ function CounterPage({ initialCount }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    
+    //dispatch is better to be simple and put logic in reducer. 
     dispatch({
       type: ADD_VALUE_TO_COUNT,
     })
