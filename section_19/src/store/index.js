@@ -26,7 +26,7 @@ const store = configureStore({
 });
 
 export { store };
-export const { addSong } = songsSlice.actions;
+export const { addSong, removeSong } = songsSlice.actions;
 
 
 //actionns mean action creater
