@@ -3,6 +3,7 @@ import { createRandomSong } from "../data";
 import { addSong } from "../store";
 
 function SongPlaylist() {
+    const dispatch = useDispatch();
   // To Do:
   // Get list of songs
   const songPlaylist = [];
