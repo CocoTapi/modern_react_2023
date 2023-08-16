@@ -23,15 +23,17 @@ const store = configureStore({
   }
 });
 
+export { store };
+
 //actionns mean action creater
 // console.log(songsSlice.actions.addSong());
 
-const startingState = store.getState();
-console.log(JSON.stringify(startingState));
+// const startingState = store.getState();
+// console.log(JSON.stringify(startingState));
 
-store.dispatch(
-    songsSlice.actions.addSong('Some Song')
-  );
+// store.dispatch(
+//     songsSlice.actions.addSong('Some Song')
+//   );
 
-const finalState = store.getState();
-console.log(JSON.stringify(finalState));
+// const finalState = store.getState();
+// console.log(JSON.stringify(finalState));
