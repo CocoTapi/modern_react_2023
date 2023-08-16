@@ -24,6 +24,8 @@ const store = configureStore({
 });
 
 export { store };
+export const { addSong } = songsSlice.actions;
+
 
 //actionns mean action creater
 // console.log(songsSlice.actions.addSong());
