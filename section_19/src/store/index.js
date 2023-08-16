@@ -1,45 +1,18 @@
 import { configureStore, createSlice} from "@reduxjs/toolkit";
 import { reset } from './actions';
 import { addMovie, removeMovie, moviesReducer } from "./slices/moviesSlice";
+import { addSong, removeSong, songsReducer } from "./slices/songsSlice";
 
-
-
-
-
-const songsSlice = createSlice({
-  name: "song",
-  initialState: [],
-  reducers: {
-    //when you type this, they will run these function: 'song' + '/' + 'addSong' = 'song/addSong'
-    addSong(state, action) {
-      //state is only for this function, not big state object.
-      state.push(action.payload);
-    },
-    // 'song' + '/' + 'removeSong' = 'song/removeSong'
-    removeSong(state, action) {
-      //action.payload === string, the song we want to remmove
-      const index = state.indexOf(action.payload);
-      state.splice(index, 1);
-    }
-  },
-  extraReducers(builder) {
-    builder.addCase(reset, (state, action) => {
-      return [];
-    })
-  }
-});
 
 const store = configureStore({
   reducer: {
     //this reducer is a big reducer
-    songs: songsSlice.reducer,
+    songs: songsReducer,
     movies: moviesReducer
   }
 });
 
-export { store, reset, addMovie, removeMovie, };
-export const { addSong, removeSong } = songsSlice.actions;
-
+export { store, reset, addMovie, removeMovie, addSong, removeSong };
 
 //actionns mean action creater
 // console.log(songsSlice.actions.addSong());
