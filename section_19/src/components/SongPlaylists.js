@@ -9,8 +9,10 @@ function SongPlaylist() {
   const songPlaylist = [];
 
   const handleSongAdd = (song) => {
-    const action = addSong(song);
-    dispatch(action);
+    // const action = addSong(song);
+    // dispatch(action);
+    //--> make those in one line
+    dispatch(addSong(song));
   };
   const handleSongRemove = (song) => {
     // To Do:
