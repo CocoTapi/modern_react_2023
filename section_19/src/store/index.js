@@ -1,4 +1,4 @@
-import { configureStore, createSlice} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { reset } from './actions';
 import { addMovie, removeMovie, moviesReducer } from "./slices/moviesSlice";
 import { addSong, removeSong, songsReducer } from "./slices/songsSlice";
