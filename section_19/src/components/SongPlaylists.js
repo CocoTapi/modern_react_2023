@@ -17,7 +17,7 @@ function SongPlaylist() {
     dispatch(addSong(song));
   };
   const handleSongRemove = (song) => {
-    // To Do:
+    dispatch(removeSong(song));
     // Remove song from list of songs
   };
 
