@@ -1,6 +1,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-const carsSlice = ({
+const carsSlice = createSlice({
     name: 'cars',
     initialState: {
         searchTerm: '',
