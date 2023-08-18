@@ -18,11 +18,10 @@ function CarList() {
     }
 
     const renderedCars = cars.map((car) => {
-        //need to check why {car.const}, not {car.cost}
         return (
             <div key={car.id} className="panel">
                 <p>
-                   {car.name} - ${car.const} 
+                   {car.name} - ${car.cost} 
                 </p>
                 <button
                     className="button is-danger"

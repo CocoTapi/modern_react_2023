@@ -11,11 +11,12 @@ const carsSlice = createSlice({
             state.searchTerm = action.payload;
         },
         addCar(state, action) {
+     
             //Assumption:
             //action.payload === { name: 'ab', cost: 140 }
             state.carsData.push({
                name: action.payload.name,
-               const: action.payload.cost,
+               cost: action.payload.cost,
                id: nanoid(),
             });
         },
