@@ -1,14 +1,19 @@
 import { useSelector, useDispatch } from "react-redux";
-import { removeCar } from "../store";
+import { removeCar, formReducer } from "../store";
 
 function CarList() {
     const dispatch = useDispatch();
 
-    const cars = useSelector(({cars: { carsData, searchTerm } }) => {
-        return carsData.filter((car) => 
+    const { cars, name } = useSelector(({form, cars: { carsData, searchTerm } }) => {
+        const filteredCars = carsData.filter((car) => 
             car.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
-    })
+
+        return {
+           cars: filteredCars,
+           name: formReducer.name 
+        }
+    });
 
     console.log(cars);
 
@@ -18,8 +23,12 @@ function CarList() {
     }
 
     const renderedCars = cars.map((car) => {
+        //DECIDE IF THID CAR SHOULD BE BOLD
+        //state.form.name
+        const bold = name && car.name.toLowerCase().includes(name.toLowerCase())
+
         return (
-            <div key={car.id} className="panel">
+            <div key={car.id} className={`panel ${bold && 'bold'}`}>
                 <p>
                    {car.name} - ${car.cost} 
                 </p>

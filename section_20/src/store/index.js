@@ -15,5 +15,6 @@ export {
     changeCost,
     addCar,
     removeCar,
-    changeSearchTerm
+    changeSearchTerm,
+    formReducer
 };
