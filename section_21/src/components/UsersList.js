@@ -1,23 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../store";
+import { fetchUsers, addUser } from "../store";
+import Button from './Button';
 import Skelton from "./Skelton";
 
 function UsersList () {
+    const [isLoadingUsers, setIsLoadingUsers] = useState(false);
+    const [loadingUsersError, setLoadingUsersError] = useState(null);
+
     const dispatch = useDispatch();
-    const {isLoading, data, error} = useSelector((state) => {
+    const {data} = useSelector((state) => {
         return state.users; // { data: [], isLoading: false, error: null }
     })
 
     useEffect(() => {
-        dispatch(fetchUsers());
+        setIsLoadingUsers(true);
+        dispatch(fetchUsers())
+            .unwrap()
+            .catch((err) => setLoadingUsersError(err))
+            .finally(() => setIsLoadingUsers(false))
     }, [dispatch]);
 
-    if (isLoading) {
+    const handleUserAdd = () => {
+        dispatch(addUser());
+    }
+
+    if (isLoadingUsers) {
         return <Skelton times={6} className="h-10 w-full" />;
     }
 
-    if (error) {
+    if (loadingUsersError) {
         return <div>Error fetching data...</div>
     }
 
@@ -31,7 +43,17 @@ function UsersList () {
         )
     })
 
-    return <div>{renderedUsers}</div>;
+    return (
+        <div>
+            <div className="flex flex-row justify-between m-3">
+                <h1 className="m-2 text-xl">Users</h1>
+                <Button onClick={handleUserAdd}>
+                    + Add User
+                </Button>
+            </div>
+            {renderedUsers}
+        </div>
+    )
 }
 
 export default UsersList;

@@ -10,3 +10,5 @@ export const store = configureStore({
 export * from './thunks/fetchUsers';
 //means find everything that gets exported from "./thunks/fetchUsers" file,
 //and exported from the index.js file as well
+
+export * from './thunks/addUser';
