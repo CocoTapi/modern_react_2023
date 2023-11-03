@@ -21,7 +21,7 @@ const usersSlice = createSlice({
         state.isLoading = false;
         state.error = action.error;
        });
-       //builder.addCase('users/fetch/pending')
+       // instead handwriting "builder.addCase('users/fetch/pending')""
 
     }
 });
