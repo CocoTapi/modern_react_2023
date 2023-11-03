@@ -4,7 +4,7 @@ import { fetchUsers } from "../store";
 
 function UsersList () {
     const dispatch = useDispatch();
-    useSelector((state) => {
+    const {isLoading, data, error} = useSelector((state) => {
         return state.users; // { data: [], isLoading: false, error: null }
     })
 
@@ -12,7 +12,15 @@ function UsersList () {
         dispatch(fetchUsers());
     }, [dispatch]);
 
-    return 'Users List';
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error fetching data...</div>
+    }
+
+    return <div>{data.length}</div>;
 }
 
 export default UsersList;
