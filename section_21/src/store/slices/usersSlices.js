@@ -43,9 +43,10 @@ const usersSlice = createSlice({
         state.isLoading = true;
        })
        builder.addCase(removeUser.fulfilled, (state, action) => {
-        state.isLoading = false
-        //fix me!!
-        console.log(action);
+        state.isLoading = false;
+        state.data = state.data.filter((user) => {
+            return user.id !== action.payload.id;
+        })
        })
        builder.addCase(removeUser.rejected, (state, action) => {
         state.isLoading = false;
