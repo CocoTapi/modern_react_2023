@@ -21,7 +21,7 @@ function UsersListItem ({ user }) {
 
     return (
         <ExpandablePanel header={header}>
-            content!!
+            content!!!
         </ExpandablePanel>       
     )
 }
