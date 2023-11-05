@@ -12,3 +12,4 @@ export * from './thunks/fetchUsers';
 //and exported from the index.js file as well
 
 export * from './thunks/addUser';
+export * from './thunks/removeUser';
