@@ -6,7 +6,6 @@ import Skelton from "./Skelton";
 import { useThunk } from '../hooks/use-thunk';
 import UsersListItem from "./UsersListItem";
 
-
 function UsersList () {
     const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers);
     const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser)
