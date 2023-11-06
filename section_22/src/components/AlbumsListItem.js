@@ -10,12 +10,13 @@ function AlbumsListItem({ album }) {
         removeAlbum(album);
     };
 
-    const header = <div>
+    const header = (
+      <>
         <Button onClick={handleRemoveAlbum} loading={results.isLoading}>
             <GoTrashcan />
         </Button>
         {album.title}
-        </div>
+      </>)
 
     return (
     <ExpandablePanel key={album.id} header={header}>
