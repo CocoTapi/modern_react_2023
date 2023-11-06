@@ -37,6 +37,16 @@
       "userId": 1,
       "title": "Small Bronze Keyboard",
       "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Modern Bronze Hat",
+      "id": 14
+    },
+    {
+      "userId": 3,
+      "title": "Practical Frozen Tuna",
+      "id": 15
     }
   ],
   "photos": []
