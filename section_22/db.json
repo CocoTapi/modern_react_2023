@@ -15,14 +15,6 @@
     {
       "name": "Rupert.Bernier8",
       "id": 5
-    },
-    {
-      "name": "Cooper14",
-      "id": 6
-    },
-    {
-      "name": "Ebony29",
-      "id": 7
     }
   ],
   "albums": [
@@ -87,29 +79,9 @@
       "id": 22
     },
     {
-      "userId": 6,
-      "title": "Unbranded Granite Mouse",
+      "userId": 1,
+      "title": "Tasty Concrete Sausages",
       "id": 23
-    },
-    {
-      "userId": 6,
-      "title": "Incredible Bronze Sausages",
-      "id": 24
-    },
-    {
-      "userId": 6,
-      "title": "Licensed Frozen Sausages",
-      "id": 25
-    },
-    {
-      "userId": 7,
-      "title": "Luxurious Frozen Towels",
-      "id": 26
-    },
-    {
-      "userId": 6,
-      "title": "Elegant Granite Tuna",
-      "id": 27
     }
   ],
   "photos": []
